@@ -1,3 +1,16 @@
+---
+layout:		post
+title:		你好世界
+subtitle:	Hello Blog
+author:		Fernando
+header-img:	
+catalog:	true
+tags:
+	- 生活
+---
+
+
+
 > 代码尚有禅意, 人生尚有多少惊喜?
 > 永远不安现状, 永远心怀敬意
 
