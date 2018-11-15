@@ -1,14 +1,14 @@
 ---
-layout:		post
-title:		Linux shell 查看文件后缀名的三种方式
-subtitle:	
-author:		
-header-img:	/img/
-catalog:	true
+layout: post
+title: "Linux shell 查看文件后缀名的三种方式"
+subtitle: "imgur+fu"
+author: "Fernando"
+header-img: "img/wsl.jpg"
+header-mask: 0.3
+catalog: true
 tags:
-	- linux shell
+  - linux shell
 ---
-
 
 
 ## Linux shell 查看文件后缀名的三种方式
