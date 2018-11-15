@@ -1,12 +1,12 @@
 ---
-layout:		post
-title:		你好世界
-subtitle:	Hello Blog
-author:		Fernando
-header-img:	
-catalog:	true
+layout: post
+title: "关于我呀"
+subtitle: "Hello World"
+author: "Fernando"
+header-img: "img/about-bg.jpg-"
+header-mask: 0.2
 tags:
-	- 生活
+  - 生活
 ---
 
 
