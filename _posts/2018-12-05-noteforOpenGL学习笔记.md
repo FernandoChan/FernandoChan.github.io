@@ -443,6 +443,8 @@ $$
 
 
 
+课程复习点: 
+
 lCH1:  Computer graphicsapplications
 
 lCH2: Raster Graphics
@@ -493,6 +495,29 @@ p3.用openGL写（给出顶点的坐标） a）一个矩形 b）一个矩形还�
 
 （0,0）                （0,1)          （0,0）                  （0,1)
 p4.写出ray tracing的算法。算法终止条件是什么？
+
+
+
+简答题
+
+Q1：What is Barycentric coordinates? Why we use it? How to calculate Barycentric coordinates?
+A local coordinates system which we usually used for shading
+
+
+Q2：What is shading? And what are the main shading models? What are the main difference between them?
+Shading is illumination rendering;
+3 common shading model:
+1.	Flat shading , the simplest one, only calculate illumination for a single point in each polygon
+2.	 
+
+Q3：What is texture? Why we need texture mapping? How to realize the texture mapping?
+
+
+
+Q4：What is aliasing? How to achieve antialiasing? 
+
+ 
+
 ```
 
 
