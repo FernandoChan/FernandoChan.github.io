@@ -35,3 +35,101 @@ Linux 下，小工程可手动写 Makefile，大工程用 automake 来帮你生�
 > 上个简图，其中 cl 表示 visual studio 的编译器，gcc 表示 linux 下的编译器
 
 ![img](https://images2017.cnblogs.com/blog/1034872/201710/1034872-20171018213217037-2085649960.png)
+
+
+
+## CMake笔记
+
+教程来自华师潘师兄的[CMake实战](http://www.hahack.com/codes/cmake/)
+
+
+
+## 安装
+
+`sudo apt install cmake`
+
+### 包含子目录
+
+根目录中的 CMakeLists.txt ：
+
+```
+# CMake 最低版本号要求
+cmake_minimum_required (VERSION 2.8)
+
+# 项目信息
+project (Demo3)
+
+# 查找当前目录下的所有源文件
+# 并将名称保存到 DIR_SRCS 变量
+aux_source_directory(. DIR_SRCS)
+
+# 添加 math 子目录
+add_subdirectory(math)
+
+# 指定生成目标 
+add_executable(Demo main.cc)
+
+# 添加链接库
+target_link_libraries(Demo MathFunctions)
+```
+
+该文件添加了下面的内容: 第3行，使用命令 `add_subdirectory` 指明本项目包含一个子目录 math，这样 math 目录下的 CMakeLists.txt 文件和源代码也会被处理 。第6行，使用命令 `target_link_libraries` 指明可执行文件 main 需要连接一个名为 MathFunctions 的链接库
+
+子目录中的 CMakeLists.txt：
+
+```
+# 查找当前目录下的所有源文件
+# 并将名称保存到 DIR_LIB_SRCS 变量
+aux_source_directory(. DIR_LIB_SRCS)
+
+# 生成链接库
+add_library (MathFunctions ${DIR_LIB_SRCS})
+```
+
+在该文件中使用命令 `add_library` 将 src 目录中的源文件编译为静态链接库。 
+
+
+
+
+
+```shell
+fernando@WIN10-608190930:~/cmake-demo/Demo3$ cmake .
+-- The C compiler identification is GNU 7.3.0
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working C compiler: /usr/bin/cc
+^@^@-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/fernando/cmake-demo/Demo3
+fernando@WIN10-608190930:~/cmake-demo/Demo3$ ls
+CMakeCache.txt  CMakeFiles  CMakeLists.txt  Makefile  cmake_install.cmake  main.cc  math
+fernando@WIN10-608190930:~/cmake-demo/Demo3$ make
+Scanning dependencies of target MathFunctions
+[ 25%] Building CXX object math/CMakeFiles/MathFunctions.dir/MathFunctions.cc.o
+[ 50%] Linking CXX static library libMathFunctions.a
+[ 50%] Built target MathFunctions
+Scanning dependencies of target Demo
+[ 75%] Building CXX object CMakeFiles/Demo.dir/main.cc.o
+[100%] Linking CXX executable Demo
+[100%] Built target Demo
+fernando@WIN10-608190930:~/cmake-demo/Demo3$ ls
+CMakeCache.txt  CMakeFiles  CMakeLists.txt  Demo  Makefile  cmake_install.cmake  main.cc  math
+```
+
+也就是说`cmake .`生成下面 的`Makefile `文件
+
+`CMakeCache.txt  CMakeFiles  CMakeLists.txt  Makefile  cmake_install.cmake  main.cc  math`
+
+`make` 编译生成了`Demo ` 这个名字是由`CMakeLists.txt  `这个文件里面的`add_executable(Demo main.cc)`决定的
+
+ 
