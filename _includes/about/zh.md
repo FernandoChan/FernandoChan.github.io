@@ -1,8 +1,9 @@
 > 代码尚有禅意, 人生尚有多少惊喜?
 > 永远不安现状, 永远心怀敬意
 
-Hey, 我是陈效威, 一个健忘星人, 国家十级退堂鼓艺术家,
-曾以为只有斜杠青年才够酷够炫, 近来意识到人的精力总是有限,所以只想在五年以后, 第一个[七年人生](https://b.xinshengdaxue.com/Preface.html)里, 做好这件又疯狂又有趣的代码答卷, 以后的事让以后去算.
+Hey, 我是陈效威.
+很喜欢两句话, 一句是老布什开自己玩笑的"Die young as late as possible", 另一句话是Avicii的歌词"Live a live you will remember"
+曾以为只有斜杠青年才够酷够炫, 近来意识到人的精力总是有限, 而我的想法又总是在变, 第一个[七年人生](https://b.xinshengdaxue.com/Preface.html)里, 做好这件又疯狂又有趣的代码答卷, 以后的事让以后去算.
 
 常出没于**网易云音乐**(效威FernandoChan),  [Github](https://github.com/FernandoChan)
 偶尔潜水于[知乎](https://www.zhihu.com/people/echothinking/)
