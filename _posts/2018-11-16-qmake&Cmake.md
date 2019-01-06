@@ -6,10 +6,33 @@ author: "Fernando"
 header-img: "img/post-bg-universe.jpg"
 header-mask: 0.2
 tags:
-  - 
+  - make
+  - 编译原理
+
+typora-copy-images-to: ..\img
 ---
 
 转载自[make ；makefile； cmake； qmake的区分](https://www.cnblogs.com/Jessica-jie/p/7689182.html)
+
+# 大型编程项目的构建原理
+
+`.c`被C编译器编译成一个目标文件`.o` 含有目标机器的二进制代码, C中没有类似于Java字节代码的东西.
+
+1. Preprocessor C预处理器
+
+   对头文件扩展宏, 处理条件编译并将结果传递给编译器. 
+
+2. Compiler 编译器
+
+3. Linker链接器
+
+   将所有`.o`文件组合成单个可以执行的二进制文件
+
+make程序读入Makefile. 
+
+> Make的作用是在构建OS二进制码时检查需要哪个目标文件, .c 或者.h头文件如果已经有修改的话就把这些目标文件重新编译, 
+
+![1546427477451](H:\OneDrive\Project(sync with Github)\FernandoChan.github.io\img/1546427477451.png)
 
 
 
