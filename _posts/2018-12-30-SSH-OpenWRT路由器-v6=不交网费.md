@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "使用OpenWrt路由器连接IPv6"
-subtitle: "SSH+OpenWRT路由器+IPv6=不交网费?"
+subtitle: "SSH+OpenWRT路由器+IPv6"
 author: "Fernando"
 header-img: "img/post-bg-universe.jpg"
 header-mask: 0.2
@@ -22,19 +22,23 @@ typora-copy-images-to: ..\img
 
 最近在学了计算机网络之后, 一直有点心痒痒. 我们学校的教育网一直都支持IPv6, 可惜自己交了两年的网费, 却没有获得过其中的便利, 尤其是连上了路由器以后,一直都在用自己买的服务器科学上网, 踩过的坑不计其数.
 
-加上这两周下载游戏的时候, 实在难以忍受区区几百KB/s 的垃圾网速. 
-
 所以决定在自己的路由器上好好折腾一番
 
-# 目标
+# Todo
+- [x] ssh自动登录vultr服务器
 
-晚上不断网
+- [ ] ssh自动登录路由器192.168.1.1  
 
-不交网费
+- [ ] 通过路由器自动登录vultr服务器
 
-科学上网
+- [x] 晚上不断网
 
-实现IPv6
+- [x] 不交网费
+
+- [x]科学上网
+
+- [x] 通过local直连IPv6到vultr服务器
+
 
 更进一步在宿舍的WiFi上实现整个宿舍所有设备的v6访问(不知可不可行)
 
@@ -80,12 +84,6 @@ typora-copy-images-to: ..\img
 
 
 ```powershell
-在管理界面--网络--接口中查出路由器WAN口的IPV6全域地址 >
-IPv6: 2001:250:3000:3CC3:82FA:5BFF:FE31:7E2E/64
-
-用网线直连电脑的:
-2001:250:3000:3cc3:b802:e7f:aa91:cb7
-用过CMD tracert -6 2404:6800:4005:80a::200e 获得的IPv6网关: 
-2001:250:3000:3cc3::1
+在管理界面--网络--接口中查出路由器WAN口的IPV6全域地址和v6网关
 ```
 ![1546178597268](H:\OneDrive\Project(sync with Github)\FernandoChan.github.io\img/1546178597268.png)
