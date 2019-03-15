@@ -39,9 +39,7 @@ typora-copy-images-to: ..\img
 
 - [x] 通过local直连IPv6到vultr服务器
 
-
-更进一步在宿舍的WiFi上实现整个宿舍所有设备的v6访问(不知可不可行)
-
+问题 : wan口能检测到v6 地址, 更改了开机启动文件, 
 # 准备
 
 - 一个海外服务器(Vultr)
